@@ -1,83 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Rajarajan M | AI Engineer</title>
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
 body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#0f172a;
-    color:white;
+background:#0f172a;
+color:white;
+line-height:1.6;
 }
 
 .container{
-    width:80%;
-    margin:auto;
+width:85%;
+margin:auto;
 }
 
-header{
-    text-align:center;
-    padding:60px 0;
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0;
 }
 
-header h1{
-    font-size:40px;
+nav h2{
+color:#60a5fa;
 }
 
-header p{
-    color:#cbd5e1;
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+}
+
+.hero{
+text-align:center;
+padding:80px 0;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.hero span{
+color:#60a5fa;
+}
+
+.hero p{
+margin-top:15px;
+color:#cbd5e1;
+}
+
+.btn{
+margin-top:20px;
+display:inline-block;
+background:#3b82f6;
+padding:12px 22px;
+border-radius:8px;
+color:white;
+text-decoration:none;
 }
 
 section{
-    margin-top:60px;
+margin-top:80px;
 }
 
 h2{
-    border-bottom:2px solid #3b82f6;
-    display:inline-block;
-    padding-bottom:5px;
+margin-bottom:20px;
+color:#60a5fa;
 }
 
-.skills span{
-    background:#1e293b;
-    padding:10px 15px;
-    margin:5px;
-    display:inline-block;
-    border-radius:8px;
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+gap:15px;
 }
 
-.project{
-    background:#1e293b;
-    padding:20px;
-    margin-top:20px;
-    border-radius:10px;
+.skill{
+background:#1e293b;
+padding:15px;
+text-align:center;
+border-radius:8px;
 }
 
-.project a{
-    color:#60a5fa;
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
-.contact a{
-    color:#60a5fa;
-    display:block;
-    margin-top:10px;
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
 }
 
-button{
-    padding:12px 20px;
-    border:none;
-    background:#3b82f6;
-    color:white;
-    border-radius:6px;
-    cursor:pointer;
+.card a{
+color:#60a5fa;
+text-decoration:none;
 }
 
-button:hover{
-    background:#2563eb;
+footer{
+text-align:center;
+margin:80px 0;
+color:#94a3b8;
 }
 
 </style>
@@ -88,111 +133,149 @@ button:hover{
 
 <div class="container">
 
-<header>
-<h1>Rajarajan M</h1>
-<p>AI Engineer | Generative AI | RAG Systems</p>
+<nav>
+
+<h2>Rajarajan</h2>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+
+<div class="hero">
+
+<h1>Hi, I'm <span>Rajarajan</span></h1>
+
+<p>AI Engineer | Generative AI | RAG Systems | LLM Applications</p>
 
 <p>
-AI Engineer focused on building LLM applications, RAG pipelines, and intelligent systems using Python, LangChain and vector databases.
+Building intelligent AI systems using Python, LangChain, vector databases and large language models.
 </p>
 
-<br>
+<a href="resume.pdf" class="btn">Download Resume</a>
 
-<a href="resume.pdf">
-<button>Download Resume</button>
-</a>
+</div>
 
-</header>
 
-<section>
+<section id="about">
+
+<h2>About Me</h2>
+
+<p>
+AI Engineer passionate about building real-world AI applications such as RAG systems, LLM tools, and intelligent assistants. I enjoy designing scalable AI pipelines and deploying them with modern AI stacks.
+</p>
+
+</section>
+
+
+<section id="skills">
 
 <h2>Skills</h2>
 
 <div class="skills">
 
-<span>Python</span>
-<span>SQL</span>
-<span>LangChain</span>
-<span>LLM</span>
-<span>RAG</span>
-<span>Transformers</span>
-<span>HuggingFace</span>
-<span>FAISS</span>
-<span>ChromaDB</span>
-<span>FastAPI</span>
-<span>Streamlit</span>
-<span>Docker</span>
-<span>Git</span>
+<div class="skill">Python</div>
+<div class="skill">Machine Learning</div>
+<div class="skill">LangChain</div>
+<div class="skill">LLMs</div>
+<div class="skill">RAG</div>
+<div class="skill">FAISS</div>
+<div class="skill">ChromaDB</div>
+<div class="skill">HuggingFace</div>
+<div class="skill">FastAPI</div>
+<div class="skill">Streamlit</div>
+<div class="skill">Docker</div>
+<div class="skill">Git</div>
 
 </div>
 
 </section>
 
 
-<section>
+<section id="projects">
 
 <h2>Projects</h2>
 
-<div class="project">
+<div class="projects">
+
+
+<div class="card">
 
 <h3>Legal Multi-Agent RAG System</h3>
 
 <p>
-Built a legal question answering system using RAG architecture with LangChain and FAISS vector database to retrieve and generate accurate legal responses.
+AI system that answers legal questions using RAG architecture with LangChain and FAISS vector search.
 </p>
+
+<br>
 
 <a href="https://github.com/RajaRajan71">GitHub</a>
 
 </div>
 
 
-<div class="project">
+<div class="card">
 
 <h3>Multimodal AI Assistant</h3>
 
 <p>
-AI assistant capable of processing image, audio and PDF inputs using LLM models to generate contextual responses.
+AI assistant capable of processing image, audio, and document inputs using LLM models.
 </p>
+
+<br>
 
 <a href="https://github.com/RajaRajan71">GitHub</a>
 
 </div>
 
 
-<div class="project">
+<div class="card">
 
 <h3>GPT-2 Fine Tuning</h3>
 
 <p>
-Fine tuned GPT-2 model on custom dataset to build a domain specific text generation system.
+Fine-tuned GPT-2 model for custom text generation using domain specific dataset.
 </p>
+
+<br>
 
 <a href="https://github.com/RajaRajan71">GitHub</a>
 
 </div>
 
 
+</div>
+
 </section>
 
 
-<section>
+<section id="contact">
 
 <h2>Contact</h2>
 
-<div class="contact">
+<p>Email: your@email.com</p>
 
-<a href="mailto:your@email.com">Email</a>
-
+<p>
 <a href="https://github.com/RajaRajan71">GitHub</a>
+</p>
 
+<p>
 <a href="https://linkedin.com">LinkedIn</a>
-
-</div>
+</p>
 
 </section>
 
 
-<br><br>
+<footer>
+
+<p>© 2026 Rajarajan M | AI Engineer</p>
+
+</footer>
 
 </div>
 
